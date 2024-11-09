@@ -1,0 +1,27 @@
+/* Museums.css */
+
+.museums-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2.5rem;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+@media (min-width: 768px) {
+    .museums-grid {
+        grid-template-columns: repeat(2, 1fr); /* Equivalent to md:grid-cols-2 */
+    }
+}
+
+@media (min-width: 1024px) {
+    .museums-grid {
+        grid-template-columns: repeat(3, 1fr); /* Equivalent to lg:grid-cols-3 */
+    }
+}
+
+@media (min-width: 1280px) {
+    .museums-grid {
+        grid-template-columns: repeat(4, 1fr); /* Equivalent to xl:grid-cols-4 */
+    }
+}

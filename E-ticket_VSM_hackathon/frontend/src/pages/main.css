@@ -1,0 +1,76 @@
+.main-container {
+    position: relative;
+    height: 100vh; 
+    width: 100%;
+    overflow: hidden;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0); /* Transparent background */
+    text-align: center;
+}
+
+.main-title {
+    font-size: 2rem; 
+    font-weight: bold;
+    color: white;
+}
+
+.main-subtitle {
+    margin-top: 1.5px;
+    font-size: 1.25rem;
+    color: white;
+}
+
+/* Plan Your Visit button styles */
+.main-button {
+    margin-top: 1rem;
+    background-color: #f8c146; /* Yellow background */
+    color: black;
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    font-size: 1.3rem;
+    border-radius: 0px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.main-button:hover {
+    background-color: #d4a136; /* Darker yellow on hover */
+    color: white; /* Change text color on hover */
+}
+
+/* Media Queries for larger screens */
+@media (min-width: 768px) {
+    .main-title {
+        font-size: 4rem; /* For medium and larger screens */
+    }
+
+    .main-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .main-button {
+        /* padding: 1rem 2rem;
+        font-size: 1.5rem; Larger button text on larger screens */
+    }
+}
