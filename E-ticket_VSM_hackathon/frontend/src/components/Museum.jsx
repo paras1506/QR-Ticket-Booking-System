@@ -95,6 +95,7 @@
 
 
 import React from "react";
+import { useNavigate } from 'react-router-dom';
 import MuseumImg from "../assets/museum.jpeg";
 import ManiBhavan from "../assets/mani bhavan.jpg";
 import Chatrapati from "../assets/chatrapati.jpg";
@@ -116,7 +117,7 @@ const imageMap = {
 
 const Museum = ({ museum, onClick }) => {
     const museumImage = imageMap[museum.name] || MuseumImg; // Default to MuseumImg if no match
-
+    const navigate = useNavigate();
     return (
         <div className="card" onClick={() => onClick(museum)}>
             {/* Museum Image */}
@@ -149,7 +150,10 @@ const Museum = ({ museum, onClick }) => {
 
                 {/* Buttons */}
                 <div className="museum-buttons">
-                    <button className="museum-button museum-button-blue">
+                    <button             
+                    className="museum-button museum-button-blue" 
+                    onClick={() => navigate(`/museum/${museum.name}`)}
+                    >
                         Read More
                     </button>
                     <button className="museum-button museum-button-green">

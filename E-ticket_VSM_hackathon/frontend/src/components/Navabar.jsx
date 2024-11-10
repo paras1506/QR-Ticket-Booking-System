@@ -169,9 +169,9 @@ const Navbar = () => {
                     <Link to="/about" className="navbar-link">
                         About
                     </Link>
-                    <Link to="/services" className="navbar-link">
+                    {/* <Link to="/services" className="navbar-link">
                         Services
-                    </Link>
+                    </Link> */}
                     <Link to="/contact" className="navbar-link">
                         Contact
                     </Link>
@@ -185,7 +185,7 @@ const Navbar = () => {
                     <Link to="/userprofile" className="navbar-link">
                         User Profile
                     </Link>
-                    <Link to="/admindashboard" className="navbar-link">
+                    <Link to="/dashboard" className="navbar-link">
                         Admin Dashboard
                     </Link>
                 </div>

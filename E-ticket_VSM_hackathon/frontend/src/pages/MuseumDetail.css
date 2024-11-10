@@ -1,0 +1,88 @@
+/* Container for the museum details */
+.museum-detail-container {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 4rem;
+    padding: 20px;
+    background-color: #4a7f82;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Museum image styling */
+.museum-detail-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for the museum image */
+.museum-detail-image:hover {
+    transform: scale(1.05);
+}
+
+/* Title styling */
+.museum-detail-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #f5f2f2;
+    margin: 10px 0;
+}
+
+/* Description styling */
+.museum-detail-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #f8f3f3;
+    margin: 15px 0;
+}
+
+/* Location styling */
+.museum-detail-location {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fcfcfc;
+    margin: 10px 0 20px;
+}
+
+/* Button styling */
+.museum-detail-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #3498db;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect for the button */
+.museum-detail-button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .museum-detail-title {
+        font-size: 1.5rem;
+    }
+
+    .museum-detail-description,
+    .museum-detail-location {
+        font-size: 0.95rem;
+    }
+
+    .museum-detail-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}

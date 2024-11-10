@@ -168,4 +168,30 @@ exports.getTicketByNumber = async (req, res) => {
     res.status(500).json({ message: "Server error", error })
   }
 }
+
+
+// Verify Ticket Endpoint (New)
+exports.verifyTicket = async (req, res) => {
+  const { ticketId } = req.body;
+
+  try {
+    const ticket = await Ticket.findOne({ ticketId });
+
+    if (!ticket) {
+      return res.status(404).json({ valid: false, message: "Ticket not found" });
+    }
+
+    const currentDate = new Date();
+    const visitDate = new Date(ticket.visitDate);
+
+    if (currentDate > visitDate) {
+      return res.status(400).json({ valid: false, message: "Ticket is expired" });
+    }
+
+    res.status(200).json({ valid: true, message: "Ticket is valid", ticket });
+  } catch (error) {
+    console.error("Error verifying ticket:", error);
+    res.status(500).json({ valid: false, message: "Server error", error });
+  }
+};
   

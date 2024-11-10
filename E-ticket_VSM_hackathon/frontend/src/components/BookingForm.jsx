@@ -124,6 +124,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import './BookingForm.css'; // Import the CSS file
 
+
 const BookingForm = ({ museum, isOpen, setIsOpen }) => {
   const [formData, setFormData] = useState({
     name: "",
